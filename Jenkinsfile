@@ -20,10 +20,13 @@ pipeline{
     }
     post {
     always{
-        echo "Running always"
+       cleanWs()
     }
     failure{
          echo "script failed"
+    }
+    success{
+        echo "deployed successfully"
     }
 }
 }
