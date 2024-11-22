@@ -35,6 +35,11 @@ pipeline{
                 sh 'echo "Deployed..."'
             }
         }
+        stage('print_para'){
+            steps{
+                echo "name:${params.BIOGRAPHY}"
+            }
+        }
     }
     post {
     always{
