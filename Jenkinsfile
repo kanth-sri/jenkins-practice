@@ -9,21 +9,21 @@ pipeline{
         }
         stage('Test'){
             steps{
-                sh echo "Testing app...."
+                sh 'echo "Testing app...."'
             }
         }
         stage('Deploy'){
             steps{
-                sh echo "Deployed..."
+                sh 'echo "Deployed..."'
             }
         }
     }
     post {
     always{
-        sh echo "Running always"
+        echo "Running always"
     }
     failure{
-        sh echo "script failed"
+         echo "script failed"
     }
 }
 }
