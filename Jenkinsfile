@@ -37,7 +37,7 @@ pipeline{
         }
         stage('print_para'){
             steps{
-                echo "name:${params.BIOGRAPHY}"
+                echo "name: ${params.PERSON}"
             }
         }
     }
